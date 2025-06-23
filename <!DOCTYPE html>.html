@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corinthians - Tudo sobre o Timão</title>
+    <!-- Incluindo Tailwind CSS para estilização fácil e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para o corpo e fontes */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; /* Preto mais profundo para o fundo */
+            color: #f0f0f0; /* Branco suave para o texto principal */
+            line-height: 1.6;
+        }
+        /* Estilos para bordas e arredondamento padrão */
+        .card {
+            background-color: #1c1c1c; /* Preto um pouco mais claro para os cards */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+            border-radius: 1rem; /* rounded-xl para mais arredondamento */
+            box-shadow: 0 8px 15px -5px rgba(0, 0, 0, 0.5); /* Sombra mais suave e espalhada */
+            padding: 2rem; /* Aumenta o padding para mais espaço interno */
+            margin: 1.25rem; /* Aumenta a margem entre os cards */
+            transition: all 0.3s ease-in-out; /* Transição suave para hover */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+            box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.7);
+        }
+        /* Estilo para listas */
+        ul {
+            list-style-type: disc; /* Adiciona um marcador de disco padrão */
+            margin-left: 1.5rem; /* ml-6 */
+        }
+        ul li {
+            margin-bottom: 0.6rem; /* mb-2.5 */
+        }
+        /* Ajuste para justificar o texto na coluna de jogadores */
+        .text-justify-custom {
+            text-align: justify;
+        }
+        /* Cores da marca para títulos e destaques */
+        .text-primary-white {
+            color: #ffffff; /* Branco puro para títulos */
+        }
+        .text-accent-red {
+            color: #e62222; /* Um vermelho mais vivo e marcante */
+        }
+        .text-secondary-gray {
+            color: #b0b0b0; /* Cinza claro para detalhes e textos secundários */
+        }
+        h1 {
+            font-size: 3.5rem; /* Título principal maior */
+            letter-spacing: -0.05em; /* Ajuste de espaçamento para título */
+        }
+        h2 {
+            font-size: 2.5rem; /* Títulos de seção maiores */
+            font-weight: 700;
+        }
+        strong {
+            color: #ffffff; /* Negrito em branco para destaque */
+        }
+
+        /* Novo estilo para o efeito RGB na borda da imagem ao passar o mouse */
+        .emblem-hover-effect:hover {
+            box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7), /* Vermelho */
+                        0 0 20px 10px rgba(0, 255, 0, 0.7), /* Verde */
+                        0 0 20px 15px rgba(0, 0, 255, 0.7); /* Azul */
+            /* Você pode ajustar os valores de blur (20px), spread (5px, 10px, 15px) e opacidade (0.7) */
+            /* Ou usar um efeito de border mais simples se preferir: */
+            /* border: 5px solid; */
+            /* border-image: linear-gradient(to right, red, green, blue) 1; */
+        }
+    </style>
+</head>
+<body class="p-4 bg-gray-950 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-6 bg-gray-800 rounded-2xl shadow-2xl max-w-7xl">
+        <h1 class="text-6xl font-extrabold text-center mb-12 text-primary-white tracking-wide drop-shadow-lg">
+            Sport Club Corinthians Paulista
+        </h1>
+
+        <!-- Layout responsivo usando flexbox e grid para dispositivos maiores -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Coluna Esquerda: Ano de Fundação e Criadores -->
+            <div class="card flex flex-col justify-between">
+                <h2 class="text-3xl font-bold text-primary-white mb-6 text-center">Fundação e Origens</h2>
+                <div class="text-secondary-gray">
+                    <p class="mb-3"><strong>Data:</strong> 1º de setembro de 1910</p>
+                    <p class="mb-3"><strong>Local:</strong> Bom Retiro, São Paulo</p>
+                    <p class="text-lg"><strong>Criadores:</strong></p>
+                    <ul class="list-disc list-inside mt-3">
+                        <li>Joaquim Ambrosio</li>
+                        <li>Antônio Pereira</li>
+                        <li>Rafael Perrone</li>
+                        <li>Anselmo Corrêa</li>
+                        <li>Carlos Silva</li>
+                    </ul>
+                    <p class="mt-6 text-base italic text-gray-500">
+                        O clube nasceu da paixão de um grupo de operários pela prática do futebol, inspirados por um time inglês que estava em turnê pelo Brasil. Um time do povo, desde o início.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Coluna Central: Gaviões da Fiel -->
+            <div class="card flex flex-col justify-center items-center lg:col-span-2 text-center">
+                <h2 class="text-5xl font-extrabold text-accent-red mb-8 leading-tight drop-shadow-md">
+                    <span class="block">Gaviões da Fiel</span>
+                    <span class="block text-3xl text-primary-white mt-3">A Maior e Mais Temida</span>
+                </h2>
+                <p class="text-secondary-gray text-xl mb-8 leading-relaxed">
+                    A Gaviões da Fiel é a maior e mais tradicional torcida organizada do Sport Club Corinthians Paulista, fundada em 1969. Conhecida por sua paixão incondicional, sua força nas arquibancadas e por ser um importante pilar de apoio e fiscalização do clube. Uma voz ativa que representa a alma do "Bando de Loucos".
+                </p>
+                <!-- O brasão do Corinthians será exibido aqui e agora é clicável -->
+                <a href="https://www.corinthians.com.br/" target="_blank" rel="noopener noreferrer" class="block">
+                    [Image of Brasão do Corinthians]
+                    <img src="https://preview.redd.it/d%C3%BAvida-sobre-o-escudo-do-corinthians-v0-haz9fkgduwoe1.png?width=500&format=png&auto=webp&s=2169bc78bd0992e3275b0731cffcd449f85b4221" alt="Brasão do Corinthians" class="mt-8 rounded-full shadow-xl h-44 w-44 object-contain mx-auto transition-transform duration-300 hover:scale-105 emblem-hover-effect">
+                </a>
+            </div>
+
+            <!-- Coluna Direita: Principais Títulos -->
+            <div class="card flex flex-col justify-between">
+                <h2 class="text-3xl font-bold text-primary-white mb-6 text-center">Conquistas Marcantes</h2>
+                <div class="text-secondary-gray">
+                    <p class="mb-3 text-xl font-medium">Os principais títulos do Corinthians incluem:</p>
+                    <ul class="list-disc list-inside mt-3">
+                        <li><strong>Mundial de Clubes da FIFA:</strong> <span class="text-accent-red">2000, 2012</span></li>
+                        <li><strong>Copa Libertadores da América:</strong> <span class="text-accent-red">2012</span></li>
+                        <li><strong>Campeonato Brasileiro:</strong> <span class="text-accent-red">1990, 1998, 1999, 2005, 2011, 2015, 2017</span></li>
+                        <li><strong>Copa do Brasil:</strong> <span class="text-accent-red">1995, 2002, 2009</span></li>
+                        <li><strong>Supercopa do Brasil:</strong> <span class="text-accent-red">1991</span></li>
+                        <li><strong>Recopa Sul-Americana:</strong> <span class="text-accent-red">2013</span></li>
+                        <li><strong>Campeonato Paulista:</strong> (Numerosos títulos, incluindo) <span class="text-accent-red">2017, 2018, 2019</span></li>
+                    </ul>
+                    <p class="mt-6 text-base italic text-gray-500">
+                        Uma história recheada de glórias e a representação de um time do povo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Coluna Justificada: Principais Jogadores (no final para melhor fluidez no layout) -->
+            <div class="card lg:col-span-4 text-justify-custom">
+                <h2 class="text-3xl font-bold text-primary-white mb-6 text-center">Grandes Nomes da História Alvinegra</h2>
+                <p class="text-secondary-gray text-lg leading-relaxed">
+                    Ao longo de sua rica história, o Corinthians foi palco de atuações memoráveis de diversos talentos.
+                    Entre os principais jogadores que vestiram o manto alvinegro e deixaram seu nome gravado, destacam-se:
+                    <strong class="font-medium">Sócrates</strong>, o "Doutor", símbolo da Democracia Corintiana;
+                    <strong class="font-medium">Rivellino</strong>, com sua "Patada Atômica" e dribles geniais;
+                    <strong class="font-medium">Casagrande</strong>, o artilheiro de alma corintiana;
+                    <strong class="font-medium">Neto</strong>, o "Xodó da Fiel", maestro do primeiro Brasileiro;
+                    <strong class="font-medium">Luizinho</strong>, o "Pequeno Polegar", um dos maiores de todos os tempos em termos de longevidade e técnica;
+                    <strong class="font-medium">Marcelinho Carioca</strong>, o "Pé de Anjo", mestre das cobranças de falta e artilheiro implacável;
+                    <strong class="font-medium">Cássio</strong>, o goleiro gigante, multicampeão e um dos maiores ídolos da história recente do clube;
+                    <strong class="font-medium">Paulinho</strong>, volante com um incrível poder de chegada e decisivo nas conquistas da Libertadores e do Mundial de 2012;
+                    e <strong class="font-medium">Ralf</strong>, o incansável cão de guarda do meio-campo, peça essencial em diversas conquistas.
+                    Esses e muitos outros craques construíram a gloriosa trajetória do Timão.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
